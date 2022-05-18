@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nagaizumi-playground-map/static/css/main.6790771c.chunk.css",
-    "main.js": "/nagaizumi-playground-map/static/js/main.acc84fe8.chunk.js",
-    "main.js.map": "/nagaizumi-playground-map/static/js/main.acc84fe8.chunk.js.map",
+    "main.js": "/nagaizumi-playground-map/static/js/main.b71b3993.chunk.js",
+    "main.js.map": "/nagaizumi-playground-map/static/js/main.b71b3993.chunk.js.map",
     "runtime-main.js": "/nagaizumi-playground-map/static/js/runtime-main.bd7fc4a9.js",
     "runtime-main.js.map": "/nagaizumi-playground-map/static/js/runtime-main.bd7fc4a9.js.map",
     "static/js/2.a7a33557.chunk.js": "/nagaizumi-playground-map/static/js/2.a7a33557.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bd7fc4a9.js",
     "static/js/2.a7a33557.chunk.js",
     "static/css/main.6790771c.chunk.css",
-    "static/js/main.acc84fe8.chunk.js"
+    "static/js/main.b71b3993.chunk.js"
   ]
 }
