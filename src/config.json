@@ -1,8 +1,8 @@
 {
-  "title": "長泉町公園マップ",
-  "description": "静岡県 駿東郡長泉町の公園マップアプリです。\n本アプリでは、以下を利用しています。\n\nGoogle スプレッドシートを更新するだけでオリジナルの地図アプリを作成できる\n「Geolonia PWAマップ」\nhttps://blog.geolonia.com/2022/05/17/pwamap-beta.html\n\n静岡県オープンデータ\nhttps://opendata.pref.shizuoka.jp/dataset/8595.html",
+  "title": "Geolonia PWAマップ",
+  "description": "Google スプレッドシートを更新するだけでオリジナルの地図アプリを作成できる\n「Geolonia PWAマップ」",
   "form_url": "",
   "logo_image_url": "https://geoloniamaps.github.io/pwamap/icon-pwamap.svg",
   "background_image_url": "https://geoloniamaps.github.io/pwamap/geolonia_bgimage_1920_1080.png",
-  "primary_color": "#b6e7f2"
+  "primary_color": "#d2691e"
 }
