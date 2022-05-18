@@ -72,7 +72,7 @@ const Content = (props: Props) => {
         filter: ["all", ["==", "$type", "Point"]],
         paint: {
           "circle-radius": 13,
-          "circle-color": "#50a6bb",
+          "circle-color": "#3a9ab3",
           "circle-opacity": 0.4,
           "circle-stroke-width": 2,
           "circle-stroke-color": "#FFFFFF",
