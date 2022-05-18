@@ -1,5 +1,5 @@
-import { BsChevronCompactRight } from 'react-icons/bs'
-import './ShopListItem.scss'
+import { BsChevronCompactRight } from "react-icons/bs";
+import "./ShopListItem.scss";
 import { Link } from "react-router-dom";
 
 type Props = {
@@ -10,37 +10,45 @@ type Props = {
 
 const Content = (props: Props) => {
   const clickHandler = () => {
-    props.popupHandler(props.data)
-  }
+    props.popupHandler(props.data);
+  };
 
-  const category = props.data['カテゴリ']
-  const image = props.data['画像']
+  const category = props.data["カテゴリ"];
+  const image = props.data["画像"];
+  const parkSize = props.data["広さ"];
 
-
-  const isCategoryPage = props.queryCategory ? true :false
+  const isCategoryPage = props.queryCategory ? true : false;
 
   return (
     <>
       <div className="shop-link">
-        <h2 className="shop-title" onClick={clickHandler}>{props.data['スポット名']}</h2>
-        <div className='tag-box'>
+        <h2 className="shop-title" onClick={clickHandler}>
+          {props.data["スポット名"]}
+        </h2>
+        <div className="tag-box">
           <span className="nowrap">
-            {
-              !isCategoryPage &&
+            {!isCategoryPage && (
               <Link to={`/list?category=${category}`}>
                 <span className="category">{category}</span>
               </Link>
-            }
+            )}
           </span>
+          <span className="nowrap">{parkSize}</span>
         </div>
 
         <div style={{ margin: "10px 10px 10px 0" }}>
-
-          { image && <img src={image} alt={props.data['スポット名']} onClick={clickHandler}/>}
-
+          {image && (
+            <img
+              src={image}
+              alt={props.data["スポット名"]}
+              onClick={clickHandler}
+            />
+          )}
         </div>
 
-        <div className="right" onClick={clickHandler}><BsChevronCompactRight size="40px" color="#CCCCCC" /></div>
+        <div className="right" onClick={clickHandler}>
+          <BsChevronCompactRight size="40px" color="#CCCCCC" />
+        </div>
       </div>
     </>
   );
