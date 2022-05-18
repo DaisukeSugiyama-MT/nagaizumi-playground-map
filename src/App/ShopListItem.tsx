@@ -33,7 +33,7 @@ const Content = (props: Props) => {
               </Link>
             )}
           </span>
-          <span className="nowrap">{parkSize}</span>
+          <span className="nowrap">{parkSize}ヘクタール</span>
         </div>
 
         <div style={{ margin: "10px 10px 10px 0" }}>
