@@ -3,11 +3,11 @@
  */
 
 const fs = require("fs");
-const path = require("path")
+const path = require("path");
 
-const GITHUB = process.argv[2].split('/')
-const GITHUB_USERNAME = GITHUB[0]
-const GITHUB_REPOSITORY = GITHUB[1]
+const GITHUB = process.argv[2].split("/");
+const GITHUB_USERNAME = GITHUB[0];
+const GITHUB_REPOSITORY = GITHUB[1];
 
 const filePath = path.join(process.cwd(), "package.json");
 
@@ -20,13 +20,12 @@ try {
 }
 
 if (!config.homepage) {
-  process.stderr.write(
-    `package.json の homepage を指定して下さい。\n`
-  );
+  process.stderr.write(`package.json の homepage を指定して下さい。\n`);
   process.exit(2);
 }
 
-config.homepage = `https://${GITHUB_USERNAME}.github.io/${GITHUB_REPOSITORY}/`
+//config.homepage = `https://${GITHUB_USERNAME}.github.io/${GITHUB_REPOSITORY}/`
+config.homepage = `https://${GITHUB_USERNAME}.github.io/`;
 
 fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
 
