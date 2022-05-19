@@ -6,7 +6,7 @@ const setCluster = (map: any) => {
     filter: ["has", "point_count"],
     paint: {
       "circle-radius": 20,
-      "circle-color": "#3a9ab3",
+      "circle-color": "#6bc9e1",
       "circle-opacity": 1.0,
     },
   });
