@@ -1,6 +1,6 @@
 {
-  "short_name": "Geolonia PWA",
-  "name": "Geolonia PWA",
+  "short_name": "playra-nagaizumi",
+  "name": "playra-map-nagaizumi",
   "icons": [
     {
       "src": "manifest-icon-192.maskable.png",
@@ -32,7 +32,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
+  "start_url": "",
   "display": "standalone",
   "theme_color": "#FFFFFF",
   "background_color": "#ffffff"
