@@ -36,7 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "/",
+  "homepage": "https://DaisukeSugiyama-MT.github.io/nagaizumi-playground-map/",
   "eslintConfig": {
     "extends": "react-app"
   },
