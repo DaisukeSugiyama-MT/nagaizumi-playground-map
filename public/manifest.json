@@ -32,7 +32,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#FFFFFF",
   "background_color": "#ffffff"
