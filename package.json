@@ -1,5 +1,5 @@
 {
-  "name": "geolonia-pwa",
+  "name": "nagaizumi-playground-map",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -36,7 +36,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://DaisukeSugiyama-MT.github.io/nagaizumi-playground-map/",
+  "homepage": "https://playra-map.info/",
   "eslintConfig": {
     "extends": "react-app"
   },
