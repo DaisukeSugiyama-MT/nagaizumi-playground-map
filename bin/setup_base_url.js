@@ -25,7 +25,7 @@ if (!config.homepage) {
 }
 
 //config.homepage = `https://${GITHUB_USERNAME}.github.io/${GITHUB_REPOSITORY}/`
-config.homepage = `https://${GITHUB_USERNAME}.github.io/`;
+config.homepage = `https://playra-map.com/`;
 
 fs.writeFileSync(filePath, JSON.stringify(config, null, 2));
 
