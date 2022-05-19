@@ -6,13 +6,13 @@ name: build
 on:
   push:
     branches:
-      - 'master'
+      - "master"
 
   workflow_dispatch:
 
   schedule:
-    - cron:  '*/10 * * * *'
-    # 10分ごとに実行
+    - cron: "0 */1 * * *"
+    # 1時間ごとに実行
 
 jobs:
   ubuntu:
@@ -21,41 +21,41 @@ jobs:
       GOOGLE_SHEET_API_KEY: ${{ secrets.GOOGLE_SHEET_API_KEY }}
       GOOGLE_SHEET_URL: ${{ secrets.GOOGLE_SHEET_URL }}
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
 
-    - name: Set base url at package.json
-      run: node bin/setup_base_url.js ${GITHUB_REPOSITORY}
+      - name: Set base url at package.json
+        run: node bin/setup_base_url.js ${GITHUB_REPOSITORY}
 
-    - run: npm install
+      - run: npm install
 
-    - name: Download data and set up environment variables
-      run: |
-        node bin/download.js ${GOOGLE_SHEET_URL} ${GOOGLE_SHEET_API_KEY}
-        node bin/config.js
+      - name: Download data and set up environment variables
+        run: |
+          node bin/download.js ${GOOGLE_SHEET_URL} ${GOOGLE_SHEET_API_KEY}
+          node bin/config.js
 
-    - name: Build PWA Assets
-      run: |
-        npm run build:assets
+      - name: Build PWA Assets
+        run: |
+          npm run build:assets
 
-    - name: Push the data to Github
-      run: |
-        git config --global user.name "${GITHUB_ACTOR}"
-        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-        if (git diff --shortstat | grep '[0-9]'); then \
-          git add .; \
-          git status .; \
-          git commit -m "スプレッドシートのデータを更新"; \
-          git push -f origin master; \
-        fi
+      - name: Push the data to Github
+        run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          if (git diff --shortstat | grep '[0-9]'); then \
+            git add .; \
+            git status .; \
+            git commit -m "スプレッドシートのデータを更新"; \
+            git push -f origin master; \
+          fi
 
-    - run: npm run build
+      - run: npm run build
 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.1
-      with:
-        branch: 'gh-pages'
-        folder: './build/'
-        target-folder: './'
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: "gh-pages"
+          folder: "./build/"
+          target-folder: "./"
