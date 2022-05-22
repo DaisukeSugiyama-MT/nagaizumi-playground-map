@@ -1,9 +1,9 @@
 import React from "react";
 // @ts-ignore
 import geojsonExtent from "@mapbox/geojson-extent";
-import toGeoJson from "./toGeoJson";
-import setCluster from "./setCluster";
-import Shop from "./Shop";
+import toGeoJson from "../toGeoJson";
+import setCluster from "../setCluster";
+import Shop from "../Shop";
 
 type Props = {
   data: Pwamap.ShopData[];

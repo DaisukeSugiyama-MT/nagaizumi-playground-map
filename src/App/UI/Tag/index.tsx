@@ -1,0 +1,21 @@
+import "./style.scss";
+
+type TagProps = {
+  color: string;
+  label: string;
+  val: boolean;
+  icon: React.ReactNode;
+};
+
+const Tag = (props: TagProps) => {
+  const { color, label, val, icon } = props;
+  return (
+    <div className="tag">
+      {icon}
+      <span>{label}</span>
+      <span> {val}</span>
+    </div>
+  );
+};
+
+export default Tag;

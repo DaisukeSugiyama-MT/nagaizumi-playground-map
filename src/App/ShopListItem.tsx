@@ -1,6 +1,9 @@
 import { BsChevronCompactRight } from "react-icons/bs";
 import "./ShopListItem.scss";
 import { Link } from "react-router-dom";
+import { FaParking, FaToilet } from "react-icons/fa";
+import { MdWaterDrop } from "react-icons/md";
+import Tag from "./UI/Tag";
 
 type Props = {
   data: Pwamap.ShopData;
@@ -16,6 +19,9 @@ const Content = (props: Props) => {
   const category = props.data["カテゴリ"];
   const image = props.data["画像"];
   const parkSize = props.data["広さ"];
+  const toilet = props.data["トイレ"] > 0 ? "あり" : "なし";
+  const parking = props.data["駐車場"] ? "あり" : "なし";
+  const water = props.data["水飲み場"] > 0 ? "あり" : "なし";
 
   const isCategoryPage = props.queryCategory ? true : false;
 
@@ -35,7 +41,11 @@ const Content = (props: Props) => {
           </span>
           <span className="nowrap">{parkSize}ヘクタール</span>
         </div>
-
+        <div>
+          <Tag color="" label="水飲み場" val={water} icon={<MdWaterDrop />} />
+          <Tag color="" label="トイレ" val={toilet} icon={<FaToilet />} />
+          <Tag color="" label="駐車場" val={parking} icon={<FaParking />} />
+        </div>
         <div style={{ margin: "10px 10px 10px 0" }}>
           {image && (
             <img
