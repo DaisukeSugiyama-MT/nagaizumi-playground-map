@@ -3,7 +3,7 @@ import "./style.scss";
 type TagProps = {
   color: string;
   label: string;
-  val: boolean;
+  val: string;
   icon: React.ReactNode;
 };
 
