@@ -8,7 +8,7 @@ type TagProps = {
 };
 
 const Tag = (props: TagProps) => {
-  const { color, label, val, icon } = props;
+  const { label, val, icon } = props;
   return (
     <div className="tag">
       {icon}
